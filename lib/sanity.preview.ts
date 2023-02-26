@@ -1,3 +1,5 @@
+"use client";
+
 import { definePreview } from 'next-sanity/preview'
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
