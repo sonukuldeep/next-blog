@@ -1,6 +1,6 @@
 import '../styles/globals.css'
-import Header from './Header'
-import Banner from './Banner'
+import Header from '../components/Header'
+import Banner from '../components/Banner'
 
 export const metadata = {
   title: 'Next.js',
@@ -17,7 +17,7 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href="/favicon.png" />
       </head>
-      <body>
+      <body className='max-w-7xl mx-auto'>
         <Header />
         <Banner/>
         {children}

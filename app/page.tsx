@@ -2,9 +2,9 @@ import React from 'react'
 import { previewData } from 'next/headers';
 import { groq } from 'next-sanity'
 import { client } from '../lib/sanity.client';
-import PreviewSuspense from './PreviewSuspense';
-import PreviewBlogList from './PreviewBlogList';
-import BlogList from './BlogList';
+import PreviewSuspense from '../components/PreviewSuspense';
+import PreviewBlogList from '../components/PreviewBlogList';
+import BlogList from '../components/BlogList';
 
 const query = groq`
 *[_type=='post'] {
