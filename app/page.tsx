@@ -6,6 +6,8 @@ import PreviewSuspense from '../components/PreviewSuspense';
 import PreviewBlogList from '../components/PreviewBlogList';
 import BlogList from '../components/BlogList';
 
+export const revalidate = 60 // revalidates and builds the pages every 60s and updates with latest cms data
+
 const query = groq`
 *[_type=='post'] {
   ...,
@@ -30,7 +32,7 @@ const page = async () => {
     )
   }
   else {
-    const posts = await client.fetch(query)
+    const posts = await client.fetch(query) //this is getStaticProps equivalent in next-js 13
     return (
       <BlogList posts={posts} />
     )
