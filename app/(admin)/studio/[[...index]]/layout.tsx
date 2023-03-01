@@ -1,6 +1,6 @@
 import '../../../../styles/globals.css'
-export { NextStudioHead } from "next-sanity/studio/head" //its not an error
-import { NextStudioHead } from 'next-sanity/studio/head'
+//export { NextStudioHead } from "next-sanity/studio/head" //its not an error
+//import { NextStudioHead } from 'next-sanity/studio/head'
 
 
 export default function RootLayout({
@@ -11,7 +11,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <head>
-                <NextStudioHead favicons={false} />
+                {/* <NextStudioHead favicons={false} /> */}
                 <link rel="icon" type="image/png" sizes="32x32" href="https://www.sanity.io/static/images/favicons/favicon-32x32.png" />
             </head>
             <body>
