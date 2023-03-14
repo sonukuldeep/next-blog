@@ -10,10 +10,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            {/* <head> */}
-                {/* <NextStudioHead favicons={false} /> */}
-                {/* <link rel="icon" type="image/png" sizes="32x32" href="https://www.sanity.io/static/images/favicons/favicon-32x32.png" /> */}
-            {/* </head> */}
+            <head>
+                {/* <NextStudioHead favicons={false} />  */} {/* A fix should be available for this when this comes out of beta */}
+                <link rel="icon" type="image/png" sizes="32x32" href="https://www.sanity.io/static/images/favicons/favicon-32x32.png" />
+            </head>
             <body>
                 {children}
             </body>
