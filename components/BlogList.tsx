@@ -12,8 +12,8 @@ const BlogList: React.FC<Props> = ({ posts }) => {
       <hr className="color-yellow-500 mb-5" />
       <div className='grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-24'>
         {posts.map(post => (
-          <ClientSideRoute route={post.slug ? `/post/${post.slug.current}`: (Math.random() * 10000).toString()}>
-            <div key={post._id} className='flex flex-col group cursor-pointer'>
+          <ClientSideRoute key={post._id} route={post.slug ? `/post/${post.slug.current}`: (Math.random() * 10000).toString()}>
+            <div className='flex flex-col group cursor-pointer'>
               <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
                 <Image src={post.mainImage ? urlFor(post.mainImage).url(): "/assets/images/placeholder-image.webp"} alt="main image" fill className='object-cover object-left lg:object-center' />
                 <div className='absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between'>
