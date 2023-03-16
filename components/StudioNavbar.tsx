@@ -1,6 +1,6 @@
-import Link from "next/link"
-import { MdOutlineArrowBack } from 'react-icons/Md';
-import { BiExit } from 'react-icons/Bi';
+import Link from "next/link";
+import { MdOutlineArrowBack } from "react-icons/Md";
+import { BiExit } from "react-icons/Bi";
 
 const StudioNavbar = (props: any) => {
   return (
