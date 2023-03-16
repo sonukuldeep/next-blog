@@ -6,7 +6,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@iconscout/react-unicons": "^2.0.0",
     "@portabletext/react": "^2.0.2",
     "@sanity/vision": "^3.0.0",
     "next": "latest",
