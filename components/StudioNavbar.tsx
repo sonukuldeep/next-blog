@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { MdOutlineArrowBack } from 'react-icons/Md';
-import { BiExit } from 'react-icons/Bi';
+// import { MdOutlineArrowBack } from 'react-icons/Md';
+// import { BiExit } from 'react-icons/Bi';
 import { UilArrowLeft } from '@iconscout/react-unicons'
 import { UilSignout } from '@iconscout/react-unicons'
 
