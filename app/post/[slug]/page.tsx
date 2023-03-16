@@ -38,13 +38,16 @@ const page = async ({ params: { slug } }: Props) => {
     const post: Post = await client.fetch(query, { slug })
     return (
         <section className='px-10 pb-20'>
-            <article className='space-y-2 border border-yellow-500 text-white justify-between'>
-                <div className='relative min-h-56 flex flex-col md:flex-row'>
+            <article className='space-y-2 text-white justify-between'>
+                {/* <div className='relative min-h-56 flex flex-col md:flex-row'>
                     <div className='absolute top-0 w-full h-full opacity-10 blur-sm p-10'>
                         <Image className='object-cover object-center mx-auto' src={urlFor(post.mainImage).url()} alt="main image" fill />
                     </div>
-                </div>
-                <article className='p-5 bg-[#e3c427a4] bg-opacity-30 w-full'>
+                </div> */}
+                <article className='relative p-5 bg-[#e3c427a4] bg-opacity-30 w-full'>
+                    <div className='absolute top-0 w-full h-full opacity-10 blur-sm p-10'>
+                        <Image className='object-cover object-center mx-auto' src={urlFor(post.mainImage).url()} alt="main image" fill />
+                    </div>
                     <div className='flex flex-col md:flex-row justify-between gap-y-5'>
                         <div>
                             <h1 className='text-4xl font-extrabold'>{post.title}</h1>
@@ -72,7 +75,9 @@ const page = async ({ params: { slug } }: Props) => {
                     </div>
                 </article>
             </article>
-            <PortableText value={post.body} components={RichTextComponent} />
+            <div className="max-w-3xl mx-auto">
+                <PortableText value={post.body} components={RichTextComponent} />
+            </div>
         </section>
     )
 }
