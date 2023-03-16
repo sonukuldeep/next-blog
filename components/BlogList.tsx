@@ -29,7 +29,7 @@ const BlogList: React.FC<Props> = ({ posts }) => {
                   </div>
                   <div className='flex flex-col md:flex-row gap-y-2'>
                     {post.categories ? post.categories.map(category => (
-                      <div key={category._id} className='text-center text-black px-3 py-1 rounded-full text-sm font-semibold'>
+                      <div key={category._id} className='text-center text-white px-3 py-1 rounded-full text-sm font-semibold'>
                         <p>{category.title}</p>
                       </div>
                     )) : ""}
